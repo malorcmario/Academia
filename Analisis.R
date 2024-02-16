@@ -1,1 +1,7 @@
 calificaciones_prepa <- read.csv("E:/Descargas/calificaciones_prepa.csv")
+install.packages("tidyverse")
+install.packages("rpart")
+library(rpart)
+library(tidyverse)
+library(dplyr)
+Mate_1<- select(calificaciones_prepa,Desc_Materia, sexo, Calif_Final) %>% filter(Desc_Materia=="MATEMATICAS_I")
