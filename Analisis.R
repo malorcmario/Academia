@@ -332,6 +332,7 @@ modelo_anova_l <- aov(Calif_Final ~ sexo, data = Lec)
 summary(modelo_anova_l)
 
 
+
 #Prueba t de Stydent
 #### Prueba de Hipótesis para Matemáticas ###
 
@@ -346,7 +347,7 @@ prueba_t_m <- t.test(Calif_Final ~ sexo, data = Mate_1)
 prueba_t_m
 
 
-rueba_t_l <- t.test(Calif_Final ~ sexo, data = Mate_1)
+prueba_t_l <- t.test(Calif_Final ~ sexo, data = Lec)
 
 # Mostrar los resultados de la prueba t
 prueba_t_l
