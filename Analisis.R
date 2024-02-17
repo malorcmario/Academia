@@ -26,3 +26,11 @@ Mediana <-median(Mate_1$Calif_Final)
 print(paste("Promedio Calificacion Matemáticas I",Media))
 print(paste("Desviación estandar Matemáticas I",Desviacion))
 print(paste("Mediana de Matemáticas I",Mediana))
+
+#obtenemos cuartiles de Matemáticas 1
+quantile(x=Mate_1$Calif_Final,probs = c(0.25, 0.50, 0.75), type = 0)
+
+#boxplot de matemáticas 1
+ggplot(data = Mate_1, mapping = aes(y=Calif_Final))+ geom_boxplot(outlier.colour = "red") + labs((title="Calificaciones de Matemáticas 1"))
+           
+                                                                                                  
