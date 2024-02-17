@@ -198,10 +198,10 @@ print(PNormalidad_mm) #Un p-value menor a 0.05 indica que el conjunto de datos t
 PNormalidad_lm <- shapiro.test(Lec_m$Calif_Final)
 print(PNormalidad_lm) #Un p-value menor a 0.05 indica que el conjunto de datos tiende a una distribución normal.
 
-PNormalidad_mf <- shapiro.test(Mate_1$Calif_Final)
+PNormalidad_mf <- shapiro.test(Mate_f$Calif_Final)
 print(PNormalidad_mf) #Un p-value menor a 0.05 indica que el conjunto de datos tiende a una distribución normal.
 
-PNormalidad_lf <- shapiro.test(Lec$Calif_Final)
+PNormalidad_lf <- shapiro.test(Lec_f$Calif_Final)
 print(PNormalidad_lf) #Un p-value menor a 0.05 indica que el conjunto de datos tiende a una distribución normal.
 
 par(mfrow=c(1,2))
