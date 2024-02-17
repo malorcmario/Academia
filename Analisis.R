@@ -8,9 +8,7 @@ library(rpart)
 library(tidyverse)
 library(dplyr)
 library(patchwork)
-#se buscan valores nulos dentro de data frame 
-any(is.nan(calificaciones_prepa))
-mean(is.na(calificaciones_prepa))
+
 
 #se obtiene de la base de datos solo la calificacion de matematicas 1
 Mate_1<- select(calificaciones_prepa,Desc_Materia, sexo, Calif_Final) %>% filter(Desc_Materia=="MATEMATICAS_I")
@@ -168,7 +166,14 @@ plot(x_mf,y_mf,type="l",lwd=2, col="red",
 x_lm <-seq(0,20,length.out=100)
 y_lm <-dnorm(x_lm, mean = Media_LM, sd=Desviacion_LM)
 plot(x_lm,y_lm,type="l",lwd=2, col="red", 
-     main = "Distribucion normal de Lectura y redacción",
+     main = "Distribucion normal de Lectura y redacción M",
+     xlab="Calificaciones", ylab = "Densidad de probabiliodad")
+
+#densidad de probabilidad para Lectura y redacción F
+x_lf <-seq(0,20,length.out=100)
+y_lf <-dnorm(x_lf, mean = Media_LF, sd=Desviacion_LF)
+plot(x_lf,y_lf,type="l",lwd=2, col="red", 
+     main = "Distribucion normal de Lectura y redacción M",
      xlab="Calificaciones", ylab = "Densidad de probabiliodad")
 
 par(mfrow=c(1,1))
