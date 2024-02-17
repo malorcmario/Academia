@@ -1,6 +1,6 @@
 
 #Se cargan librerías y las bases de datos de las calificaciones 
-calificaciones_prepa <- read.csv("E:/Descargas/calificaciones_prepa.csv")
+calificaciones_prepa <- read.csv("~/GitHub/Academia/calificaciones_prepa.csv")
 install.packages("tidyverse")
 install.packages("rpart")
 install.packages("patchwork")
