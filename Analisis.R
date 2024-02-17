@@ -321,10 +321,15 @@ wrap_plots(G12, G13, ncol = 2, nrow = 1 )
 # utilizando la función aov(), con la calificación final  como variable dependiente y el
 # sexo como variable independiente.
 
-modelo_anova <- aov(Calif_Final ~ sexo, data = Mate_1)
+modelo_anova_m <- aov(Calif_Final ~ sexo, data = Mate_1)
 
 # Se otienen los resultados de ANOVA mediante la función summary
-summary(modelo_anova)
+summary(modelo_anova_m)
+
+modelo_anova_l <- aov(Calif_Final ~ sexo, data = Lec)
+
+# Se otienen los resultados de ANOVA mediante la función summary
+summary(modelo_anova_l)
 
 
 #Prueba t de Stydent
@@ -335,8 +340,14 @@ summary(modelo_anova)
 #Ho: La diferencia de medias entre hombres y mujeres es igual a cero.
 #Ha: La diferencia de medias entre hombres y mujeres es diferente de cero.
 
-prueba_t <- t.test(Calif_Final ~ sexo, data = Mate_1)
+prueba_t_m <- t.test(Calif_Final ~ sexo, data = Mate_1)
 
 # Mostrar los resultados de la prueba t
-prueba_t
+prueba_t_m
+
+
+rueba_t_l <- t.test(Calif_Final ~ sexo, data = Mate_1)
+
+# Mostrar los resultados de la prueba t
+prueba_t_l
 
